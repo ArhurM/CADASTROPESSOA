@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "S2eNfc1aHZ0hY1rMBQxpSs3arsLHgkRNs60HQC8aXn9w9GlCxWt1VtykO4MwAscczfeDBhc8x5YdLrxlLN5dKw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Arthur\\Desktop\\Estudos DotNET\\Aula CSharp\\CADASTROPESSOA\\CadastroPessoa.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Arthur\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.20\\microsoft.netcore.app.host.win-x64.3.1.20.nupkg.sha512"
+  ],
+  "logs": []
+}

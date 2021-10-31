@@ -1,0 +1,14 @@
+C:\Users\Arthur\Desktop\Estudos DotNET\Aula CSharp\CADASTROPESSOA\bin\Debug\netcoreapp3.1\CadastroPessoa.exe
+C:\Users\Arthur\Desktop\Estudos DotNET\Aula CSharp\CADASTROPESSOA\bin\Debug\netcoreapp3.1\CadastroPessoa.deps.json
+C:\Users\Arthur\Desktop\Estudos DotNET\Aula CSharp\CADASTROPESSOA\bin\Debug\netcoreapp3.1\CadastroPessoa.runtimeconfig.json
+C:\Users\Arthur\Desktop\Estudos DotNET\Aula CSharp\CADASTROPESSOA\bin\Debug\netcoreapp3.1\CadastroPessoa.runtimeconfig.dev.json
+C:\Users\Arthur\Desktop\Estudos DotNET\Aula CSharp\CADASTROPESSOA\bin\Debug\netcoreapp3.1\CadastroPessoa.dll
+C:\Users\Arthur\Desktop\Estudos DotNET\Aula CSharp\CADASTROPESSOA\bin\Debug\netcoreapp3.1\CadastroPessoa.pdb
+C:\Users\Arthur\Desktop\Estudos DotNET\Aula CSharp\CADASTROPESSOA\obj\Debug\netcoreapp3.1\CadastroPessoa.csproj.AssemblyReference.cache
+C:\Users\Arthur\Desktop\Estudos DotNET\Aula CSharp\CADASTROPESSOA\obj\Debug\netcoreapp3.1\CadastroPessoa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arthur\Desktop\Estudos DotNET\Aula CSharp\CADASTROPESSOA\obj\Debug\netcoreapp3.1\CadastroPessoa.AssemblyInfoInputs.cache
+C:\Users\Arthur\Desktop\Estudos DotNET\Aula CSharp\CADASTROPESSOA\obj\Debug\netcoreapp3.1\CadastroPessoa.AssemblyInfo.cs
+C:\Users\Arthur\Desktop\Estudos DotNET\Aula CSharp\CADASTROPESSOA\obj\Debug\netcoreapp3.1\CadastroPessoa.csproj.CoreCompileInputs.cache
+C:\Users\Arthur\Desktop\Estudos DotNET\Aula CSharp\CADASTROPESSOA\obj\Debug\netcoreapp3.1\CadastroPessoa.dll
+C:\Users\Arthur\Desktop\Estudos DotNET\Aula CSharp\CADASTROPESSOA\obj\Debug\netcoreapp3.1\CadastroPessoa.pdb
+C:\Users\Arthur\Desktop\Estudos DotNET\Aula CSharp\CADASTROPESSOA\obj\Debug\netcoreapp3.1\CadastroPessoa.genruntimeconfig.cache

@@ -68,7 +68,7 @@ namespace CadastroPessoa
             novaPF.datadeNasc = new DateTime(1994, 12, 11);
             novaPF.rendimento = 1500;
             
-            Console.WriteLine($@"Rua: {novaPF.endereco.longradouro}, {novaPF.endereco.numero}");
+            Console.WriteLine($@"Rua: {novaPF.endereco.logradouro}, {novaPF.endereco.numero}");
 
             bool idadeValida = PF.validardatadeNasc(novaPF.datadeNasc);
             
@@ -95,8 +95,9 @@ namespace CadastroPessoa
             endPJ.enderecoComercial = true;
 
             novaPJ.endereco = endPJ;
-            novaPJ.cnpj = "23676578460001";
+            novaPJ.cnpj = "23676000000101";
             novaPJ.razaoSocial = "Pessoa Juridica";
+            novaPJ.rendimento = 10000;
 
             if (PJ.validarCNPJ(novaPJ.cnpj))
             {
@@ -106,6 +107,9 @@ namespace CadastroPessoa
                 Console.WriteLine("CNPJ Invalido!!!");
 
             } 
+
+            Console.WriteLine($"O valor do Desconto do imposto é de: {PJ.pagarImposto(novaPJ.rendimento).ToString("")} reais"); 
+
            break; 
     case "0":
             Console.Clear();

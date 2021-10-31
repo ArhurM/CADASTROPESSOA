@@ -4,7 +4,7 @@ namespace CadastroPessoa
     {
         public string nome { get; set; }
 
-        public string endereco { get; set; }
+        public endereco endereco { get; set; }
 
         public bool enderecoComercial { get; set; }
 

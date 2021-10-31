@@ -22,8 +22,9 @@ namespace CadastroPessoa
                 return(rendimento/100) *10;
             }
         }
+        //metodo que valida o CNPJ.
         public bool validarCNPJ(string cnpj){
-
+//cnpj tem 14 caracteres e o metodo substring diminui 14 - 6 , e avalia somente 4 == 0001
             if(cnpj.Length == 14 && cnpj.Substring(cnpj.Length - 6, 4) == "0001")
              {
                  return true;
