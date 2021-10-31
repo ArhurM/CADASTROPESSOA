@@ -5,14 +5,16 @@
 Introdução ao .NET: [Documentação C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
 
 
-UC9 SA2 Codificação Back-End
-Desafio	Data do Encontro	Status
-Encontro Remoto 1	24/09	✔️
-Encontro Remoto 2	01/10	✔️
-Encontro Remoto 3	08/10	✔️
-Encontro Remoto 4	15/10	✔️
-Encontro Remoto 5	22/10	✔️
-Encontro Remoto 6	29/10	✔️
+<b> UC9 SA2 Codificação Back-End </b>
+
+ 
+ <table><tr><td>Desafio	Data do Encontro	Status</tr></td>
+<tr><td><b>Encontro Remoto 1:</b>	24/09	✔️</tr></td>
+<tr><td><b>Encontro Remoto 2:</b>	01/10	✔️</tr></td>
+<tr><td><b>Encontro Remoto 3:</b>	08/10	✔️</tr></td>
+<tr><td><b>Encontro Remoto 4:</b>	15/10	✔️</tr></td>
+<tr><td><b>Encontro Remoto 5:</b>	22/10	✔️</tr></td>
+<tr><td><b>Encontro Remoto 6:</b>	29/10	✔️</tr></td></table>
 
 
 ### 🔴 Requisitos:
