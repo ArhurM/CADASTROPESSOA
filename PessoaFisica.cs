@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.IO;
 using System;
 
 namespace CadastroPessoa
@@ -8,6 +10,8 @@ namespace CadastroPessoa
         public string cpf { get; set; }
 
         public DateTime datadeNasc { get; set; }
+
+        public string caminho { get; private set; } = "Database/PessoaFisica.csv";
 
         public override double pagarImposto(float rendimento){
             if (rendimento <= 1500)
@@ -41,5 +45,42 @@ namespace CadastroPessoa
 
         }
         
+        
+        public string PrepararLinhasCsv(PessoaFisica PF){
+
+            return $"{PF.nome};{PF.cpf}";
+        }
+        public void Inserir(PessoaFisica PF){
+
+            string[] linhas = {PrepararLinhasCsv(PF)};
+
+            File.AppendAllLines(caminho, linhas);
+        }
+
+        public List<PessoaFisica> Ler(){
+
+            List<PessoaFisica> listaPF = new List<PessoaFisica>();
+
+            string[] linhas = File.ReadAllLines(caminho);
+
+            foreach (var cadaLinha in linhas)
+            {
+                string[] atributos = cadaLinha.Split(";");
+
+                PessoaFisica cadaPF = new PessoaFisica();
+                
+                cadaPF.nome = atributos[0];
+                cadaPF.cpf = atributos[1];
+            
+            
+                listaPF.Add(cadaPF);
+
+            }
+
+            return listaPF;
+            
+        }
+
+
       }
     }

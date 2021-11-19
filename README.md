@@ -15,7 +15,8 @@ Introdução ao .NET: [Documentação C#](https://docs.microsoft.com/pt-br/dotne
 <tr><td><b>Encontro Remoto 4:</b>	15/10	✔️</tr></td>
 <tr><td><b>Encontro Remoto 5:</b>	22/10	✔️</tr></td>
 <tr><td><b>Encontro Remoto 6:</b>	29/10	✔️</tr></td>
-<tr><td><b>Encontro Remoto 7:</b>	05/11	✔️</tr></td></table>
+<tr><td><b>Encontro Remoto 7:</b>	05/11	✔️</tr></td>
+<tr><td><b>Encontro Remoto 8:</b>	12/11	✔️</tr></td></table>
 
 
 ### 🔴 Requisitos:

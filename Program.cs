@@ -60,29 +60,7 @@ namespace CadastroPessoa
             PessoaFisica novaPF = new PessoaFisica();
             endereco endPF = new endereco();
 
-
-            Console.WriteLine($"Digite Seu Logradouro");
-            endPF.logradouro = Console.ReadLine();
-
-            Console.WriteLine($"Digite o Numero");
-            endPF.numero = int.Parse(Console.ReadLine());
-
-            Console.WriteLine($"Digite o complemento (Aperte ENTER para vazio)");
-            endPF.complemento = Console.ReadLine();
-
-            Console.WriteLine($"Este endereco é Comercial ? S/N");
-            string enderecoComercial = Console.ReadLine().ToUpper();
-
-            if (enderecoComercial == "S")
-            {
-                endPF.enderecoComercial = true;
-            }else
-            {
-                endPF.enderecoComercial = false;
-            }
-            
-            novaPF.endereco = endPF;
-
+  
             Console.WriteLine($"Digite o Seu Nome");
             novaPF.nome = Console.ReadLine();
 
@@ -107,14 +85,62 @@ namespace CadastroPessoa
             {
                 Console.WriteLine($"Cadastro Reprovado! ");
             }
-       
+
+
+            Console.WriteLine($"Digite Seu Logradouro");
+            endPF.logradouro = Console.ReadLine();
+
+            Console.WriteLine($"Digite o Numero");
+            endPF.numero = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Digite o complemento (Aperte ENTER para vazio)");
+            endPF.complemento = Console.ReadLine();
+
+            Console.WriteLine($"Este endereco é Comercial ? S/N");
+            string enderecoComercial = Console.ReadLine().ToUpper();
+
+            if (enderecoComercial == "S")
+            {
+                endPF.enderecoComercial = true;
+            }else
+            {
+                endPF.enderecoComercial = false;
+            }
+            
+            novaPF.endereco = endPF;
+
+            using (StreamWriter sw = new StreamWriter($"{novaPF.nome}.txt"))
+                {
+                     sw.Write($"{novaPF.nome},{novaPF.cpf},{novaPF.datadeNasc}");
+                }
+
+                using (StreamReader sr = new StreamReader($"{novaPF.nome}.txt"))
+                {
+                     string linha;
+
+                     while ((linha = sr.ReadLine()) != null)
+                     {
+                         Console.WriteLine($"{linha}");
+                     }
+                }
+
+            PF.verificarArquivo(PF.caminho);
+            PF.Inserir(novaPF);    
            break;
 
     case "2":
-            foreach (var cadaItem in listaPF)
+
+        if (listaPF.Count>0)
+        {
+          foreach (var cadaItem in listaPF)
             {
-              Console.WriteLine($"{cadaItem.nome}, {cadaItem.cpf}, {cadaItem.endereco.logradouro}");  
-            }
+              Console.WriteLine($"Nome: {cadaItem.nome},CPF: {cadaItem.cpf},Endereço: {cadaItem.endereco.logradouro}");  
+            }  
+        }else
+        {
+            Console.WriteLine($"Lista Vazia!");
+        }
+            
            break;
 
     case "3":  
@@ -130,15 +156,35 @@ namespace CadastroPessoa
             {
                 Console.WriteLine($"CPF não Encotrado");
             }
-            
-            
-
            break;       
         
     case "4":
             PessoaJuridica PJ = new PessoaJuridica();
             PessoaJuridica novaPJ = new PessoaJuridica();
             endereco endPJ = new endereco();
+
+            Console.WriteLine($"Digite seu Nome");
+            novaPJ.nome = Console.ReadLine();
+
+            Console.WriteLine($"Digite seu CNPJ (Somente numeros)");
+            novaPJ.cnpj = Console.ReadLine();
+
+            Console.WriteLine($"Digite sua Razao Social");
+            novaPJ.razaoSocial = Console.ReadLine();
+
+            Console.WriteLine($"Digite seu rendimento mensal (Somente numeros)");
+            novaPJ.rendimento = float.Parse(Console.ReadLine());
+
+            if (PJ.validarCNPJ(novaPJ.cnpj))
+            {
+                Console.WriteLine("CNPJ Valido !!!");
+                listaPJ.Add(novaPJ);
+                Console.WriteLine($"O valor do Desconto do imposto é de: {PJ.pagarImposto(novaPJ.rendimento).ToString("")} reais");
+            }else
+            {
+                Console.WriteLine("CNPJ Invalido!!!");
+
+            }  
             
             Console.WriteLine($"Digite Seu Logradouro");
             endPJ.logradouro = Console.ReadLine();
@@ -162,33 +208,38 @@ namespace CadastroPessoa
 
             novaPJ.endereco = endPJ;
 
-            Console.WriteLine($"Digite seu CNPJ (Somente numeros)");
-            novaPJ.cnpj = Console.ReadLine();
+            using (StreamWriter sw = new StreamWriter($"{novaPJ.nome}.txt"))
+                {
+                     sw.Write($"{novaPJ.nome}, {novaPJ.cnpj}, {novaPJ.razaoSocial}");
+                }
 
-            Console.WriteLine($"Digite sua Razao Social");
-            novaPJ.razaoSocial = Console.ReadLine();
+                using (StreamReader sr = new StreamReader($"{novaPJ.nome}.txt"))
+                {
+                     string linha;
 
-            Console.WriteLine($"Digite seu rendimento mensal (Somente numeros)");
-            novaPJ.rendimento = float.Parse(Console.ReadLine());
-
-            if (PJ.validarCNPJ(novaPJ.cnpj))
-            {
-                Console.WriteLine("CNPJ Valido !!!");
-                listaPJ.Add(novaPJ);
-                Console.WriteLine($"O valor do Desconto do imposto é de: {PJ.pagarImposto(novaPJ.rendimento).ToString("")} reais");
-            }else
-            {
-                Console.WriteLine("CNPJ Invalido!!!");
-
-            }  
-
+                     while ((linha = sr.ReadLine()) != null)
+                     {
+                         Console.WriteLine($"{linha}");
+                     }
+                }
+                 
+             PJ.verificarArquivo(PJ.caminho);
+             PJ.Inserir(novaPJ);    
            break;
 
     case "5":
-            foreach (var cadaItem in listaPJ)
+
+     if (listaPJ.Count>0)
+        {
+          foreach (var cadaItem in listaPJ)
             {
-              Console.WriteLine($"{cadaItem.nome}, {cadaItem.cnpj}, {cadaItem.endereco.logradouro}");  
-            }
+              Console.WriteLine($"Nome: {cadaItem.nome},CNPJ: {cadaItem.cnpj},Endereço: {cadaItem.endereco.logradouro}");  
+            }  
+        }else
+        {
+            Console.WriteLine($"Lista Vazia!");
+        }
+            
            break;
 
     case "6":  
